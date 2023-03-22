@@ -95,16 +95,18 @@ h1 span{
 
 @media (max-width:760px){
     .card{
-        width: 85vw;
-        height: 85vh;
+        width: 100vw;
+        height: 100vh;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
 
     .card-detail{
-        width:auto;
-        height: 70%;
-        padding:1.5rem;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height: 100vh;
+        padding:1rem;
         color: var(--white);
         text-align: center;
     }
@@ -123,10 +125,10 @@ h1 span{
         border-radius: 7px 7px 0px 0px;
     }
     .card-detail h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .card-detail p{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .list .number{
         font-size: 2rem;
