@@ -1,0 +1,143 @@
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    /* (main background): */
+    --very-dark-blue: hsl(233, 47%, 7%);
+    /* (card background) */
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    /*  (accent) */
+    --doft-violet: hsl(277, 64%, 61%);
+
+
+    /* ### Neutral */
+    /* (main heading, stats) */
+    --white: hsl(0, 0%, 100%);
+    /* (main paragraph) */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*  (stat headings) */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+
+    /* ### Font */
+    --inter: 'Inter', sans-serif;
+    --lexend-Deca: 'Lexend Deca', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--very-dark-blue);
+}
+
+.card-container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color:var(--dark-desaturated-blue);
+    width: 65vw;
+    display: flex;
+    border-radius: 7px;
+    justify-content: center;
+}
+.card-detail{
+    width: 50%;
+    padding: 4rem;
+    color: var(--white);
+}
+.card-detail h1{
+    font-family: var(--inter);
+    font-size: 2.2rem;
+}
+h1 span{
+    color: var(--doft-violet);
+}
+.card-detail p{
+    color: var(--slightly-transparent-white);
+    font-family: var(--lexend-Deca);
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 1.5rem 0rem 3rem 0rem ;
+}
+
+
+.list{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.list .number{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--inter);
+}
+
+.list .name{
+    color:var( --slightly-transparent-white);
+    font-family: var(--lexend-Deca);
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.card-image{
+    width: 50%;
+    border-radius: 0px 7px 7px 0px;
+    background: linear-gradient(0deg, hsla(277,64%,61%,0.5) 0%,hsla(277,64%,61%,0.5)100%), url("./images/image-header-desktop.jpg") center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:760px){
+    .card{
+        width: 85vw;
+        height: 85vh;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .card-detail{
+        width:auto;
+        height: 70%;
+        padding:1.5rem;
+        color: var(--white);
+        text-align: center;
+    }
+    .list{
+        flex-direction: column;
+    } 
+    .companies{
+        margin-bottom: 2rem;
+    }
+    .templates{
+        margin-bottom: 2rem;
+    }
+    .card-image{
+        height: 30%;
+        width: 100%;
+        border-radius: 7px 7px 0px 0px;
+    }
+    .card-detail h1{
+        font-size: 3rem;
+    }
+    .card-detail p{
+        font-size: 2rem;
+    }
+    .list .number{
+        font-size: 2rem;
+    }
+    
+    .list .name{
+        font-size: .9rem;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
